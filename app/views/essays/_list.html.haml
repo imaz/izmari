@@ -7,7 +7,11 @@
   - @essays.each do |essay|
     %tr
       %td= essay.copy
-      %td= essay.good_count
-      %td= essay.bad_count
+      %td
+        %span.emo (笑)
+        =essay.good_count
+      %td
+        %span.emo (悲)
+        =essay.bad_count
 
 %br
