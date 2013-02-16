@@ -14,12 +14,15 @@
 ActiveRecord::Schema.define(:version => 20130216024718) do
 
   create_table "essays", :force => true do |t|
+    t.integer  "idiom_id"
     t.text     "copy"
     t.integer  "good_count"
     t.integer  "bad_count"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "essays", ["idiom_id"], :name => "index_essays_on_idiom_id"
 
   create_table "idioms", :force => true do |t|
     t.string   "word"
