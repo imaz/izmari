@@ -57,6 +57,8 @@ class EssaysController < ApplicationController
   # PUT /essays/1.json
   def update
     @essay = Essay.find(params[:id])
+    g = @essay.good_count
+    @essay.good_count = g ? g+1 : 1
 
     respond_to do |format|
       if @essay.update_attributes(params[:essay])

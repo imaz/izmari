@@ -8,10 +8,10 @@
     %tr
       %td= essay.copy
       %td
-        %span.emo (笑)
-        =essay.good_count
+        = link_to '(笑)', essay, {method: :put, class: 'emo'}
+        = essay.good_count
       %td
-        %span.emo (悲)
-        =essay.bad_count
+        %a.emo (悲)
+        = essay.bad_count
 
 %br
