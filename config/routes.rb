@@ -1,4 +1,7 @@
 Izimaz::Application.routes.draw do
+  resources :essays
+
+
   resources :idioms
 
 

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  copy: MyText
+  good_count: 1
+  bad_count: 1
+
+two:
+  copy: MyText
+  good_count: 1
+  bad_count: 1

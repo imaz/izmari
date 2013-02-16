@@ -1,0 +1,23 @@
+%h1 Listing essays
+
+%table
+  %tr
+    %th Copy
+    %th Good count
+    %th Bad count
+    %th
+    %th
+    %th
+
+  - @essays.each do |essay|
+    %tr
+      %td= essay.copy
+      %td= essay.good_count
+      %td= essay.bad_count
+      %td= link_to 'Show', essay
+      %td= link_to 'Edit', edit_essay_path(essay)
+      %td= link_to 'Destroy', essay, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Essay', new_essay_path

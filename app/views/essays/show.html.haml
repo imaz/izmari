@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Copy:
+  = @essay.copy
+%p
+  %b Good count:
+  = @essay.good_count
+%p
+  %b Bad count:
+  = @essay.bad_count
+
+= link_to 'Edit', edit_essay_path(@essay)
+\|
+= link_to 'Back', essays_path

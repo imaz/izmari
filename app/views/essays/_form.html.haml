@@ -1,0 +1,19 @@
+= form_for @essay do |f|
+  -if @essay.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@essay.errors.count, "error")} prohibited this essay from being saved:"
+      %ul
+        - @essay.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :copy
+    = f.text_area :copy
+  .field
+    = f.label :good_count
+    = f.number_field :good_count
+  .field
+    = f.label :bad_count
+    = f.number_field :bad_count
+  .actions
+    = f.submit 'Save'
