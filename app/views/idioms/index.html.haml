@@ -10,7 +10,8 @@
 
   - @idioms.each do |idiom|
     %tr
-      %td= idiom.word
+      %td
+        %a{:href => 'idioms/%d' % idiom.id}= idiom.word
       %td= idiom.description
       %td= link_to 'Show', idiom
       %td= link_to 'Edit', edit_idiom_path(idiom)
