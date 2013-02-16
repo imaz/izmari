@@ -4,6 +4,8 @@
   %h2= @idiom.word
   =simple_format(@idiom.description)
 
+- @essay = Essay.new
+= render 'essays/form'
 = render 'essays/list'
 
 = link_to 'Top', root_path
