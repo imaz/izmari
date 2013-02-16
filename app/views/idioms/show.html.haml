@@ -1,12 +1,9 @@
 %p#notice= notice
 
-%p
-  %b Word:
-  = @idiom.word
-%p
-  %b Description:
-  = @idiom.description
+%section#idiom
+  %h2= @idiom.word
+  =simple_format(@idiom.description)
 
-= link_to 'Edit', edit_idiom_path(@idiom)
-\|
-= link_to 'Back', idioms_path
+= render 'essays/list'
+
+= link_to 'Top', root_path

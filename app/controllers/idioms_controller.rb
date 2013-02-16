@@ -14,6 +14,7 @@ class IdiomsController < ApplicationController
   # GET /idioms/1.json
   def show
     @idiom = Idiom.find(params[:id])
+    @essays = Essay.all
 
     respond_to do |format|
       format.html # show.html.erb
