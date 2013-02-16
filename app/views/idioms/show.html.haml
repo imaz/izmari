@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Word:
+  = @idiom.word
+%p
+  %b Description:
+  = @idiom.description
+
+= link_to 'Edit', edit_idiom_path(@idiom)
+\|
+= link_to 'Back', idioms_path

@@ -1,0 +1,16 @@
+= form_for @idiom do |f|
+  -if @idiom.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@idiom.errors.count, "error")} prohibited this idiom from being saved:"
+      %ul
+        - @idiom.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :word
+    = f.text_field :word
+  .field
+    = f.label :description
+    = f.text_area :description
+  .actions
+    = f.submit 'Save'
